@@ -1,0 +1,67 @@
+package model;
+
+import model.exception.DataOutOfBoundsException;
+
+public class Coche extends Vehiculo{
+	private int nruedas, npuertas;
+	private String nmatricula;
+	
+	public Coche() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Coche(float peso, String nombre, String descripcion, Posicion ubicacion, Dimension dimensiones) {
+		super(peso, nombre, descripcion, ubicacion, dimensiones);
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Coche(float peso, String nombre, String descripcion, Posicion ubicacion, Dimension dimensiones, int nruedas, int npuertas, String nmatricula) {
+		super(peso, nombre, descripcion, ubicacion, dimensiones);
+		// TODO Auto-generated constructor stub
+		this.nruedas = nruedas;
+		this.npuertas = npuertas;
+		this.nmatricula = nmatricula;
+	}
+
+	public Coche(int nruedas, int npuertas, String nmatricula) {
+		super();
+		this.nruedas = nruedas;
+		this.npuertas = npuertas;
+		this.nmatricula = nmatricula;
+	}
+
+	public int getNruedas() {
+		return nruedas;
+	}
+
+	public void setNruedas(int nruedas) {
+		if(this.nruedas < 1) {
+			throw new DataOutOfBoundsException();
+		}
+		this.nruedas = nruedas;
+	}
+
+	public int getNpuertas() {
+		return npuertas;
+	}
+
+	public void setNpuertas(int npuertas) {
+		this.npuertas = npuertas;
+	}
+
+	public String getNmatricula() {
+		return nmatricula;
+	}
+
+	public void setNmatricula(String nmatricula) {
+		this.nmatricula = nmatricula;
+	}
+
+	@Override
+	public String toString() {
+		return "Coche [nruedas=" + nruedas + ", npuertas=" + npuertas + ", nmatricula=" + nmatricula + ", Datos del "
+				+ super.toString() + "]";
+	}
+	
+}

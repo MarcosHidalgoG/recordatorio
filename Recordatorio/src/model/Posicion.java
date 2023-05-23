@@ -1,0 +1,39 @@
+package model;
+
+public class Posicion {
+	private Coordenadas coor;
+	private float altitud;
+	
+	public Posicion() {
+		// TODO Auto-generated constructor stub
+		this.coor = new Coordenadas();
+	}
+
+	public Posicion(Coordenadas coor, float altitud) {
+		this.coor = coor;
+		this.altitud = altitud;
+	}
+
+	public Coordenadas getCoor() {
+		return coor;
+	}
+
+	public void setCoor(Coordenadas coor) {
+		this.coor = coor;
+	}
+
+	public float getAltitud() {
+		return altitud;
+	}
+
+	public void setAltitud(float altitud) {
+		this.altitud = altitud;
+	}
+
+	@Override
+	public String toString() {
+		return "Posicion [coor=" + coor + ", altitud=" + altitud + "]";
+	}
+	
+	
+}

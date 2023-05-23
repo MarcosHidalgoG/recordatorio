@@ -1,0 +1,6 @@
+package model;
+
+public class Coordenadas {
+
+	private float latitud, longitud;
+}

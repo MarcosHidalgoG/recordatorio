@@ -1,0 +1,9 @@
+package model;
+
+public class Vehiculo {
+	private float peso;
+	private String nombre;
+	private String descripcion;
+	private Dimension dimensiones;
+	
+}

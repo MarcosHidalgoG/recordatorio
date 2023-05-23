@@ -1,0 +1,5 @@
+package model.enums;
+
+public enum MarcasCoches {
+	Ford, Mazda, Citroen, Peugeot, Renault, Opl, Mercedes, Honda 
+}

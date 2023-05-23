@@ -1,0 +1,71 @@
+package controller.utils;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import model.enums.MarcasCoches;
+
+public class Utils {
+	public static HashMap<MarcasCoches, ArrayList<String>> generateRelacionMarcaModelo() {
+		HashMap<MarcasCoches, ArrayList<String>> map = new HashMap<MarcasCoches, ArrayList<String>>(); 
+		
+		map.put(MarcasCoches.Citroen, new ArrayList<String>() {{
+			add("Berlingo");
+			add("C3");
+			add("C4");
+			add("C5");
+			add("Ami");
+		}});
+		map.put(MarcasCoches.Ford, new ArrayList<String>() {{
+			add("Focus");
+			add("Fiesta");
+			add("Mustang");
+			add("Kuga");
+			add("Bronco");
+		}});
+		map.put(MarcasCoches.Honda, new ArrayList<String>() {{
+			add("Civic");
+			add("CR-V");
+			add("HR-V");
+			add("Jazz");
+			add("City");
+		}});
+		map.put(MarcasCoches.Mazda, new ArrayList<String>() {{
+			add("Mx-5");
+			add("6");
+			add("3");
+			add("XR-7");
+			add("CX-60");
+		}});
+		map.put(MarcasCoches.Mercedes, new ArrayList<String>() {{
+			add("Benz C-S");
+			add("Benz C-A");
+			add("Benz C-C");
+			add("Benz C-E");
+			add("Benz G");
+		}});
+		map.put(MarcasCoches.Opel, new ArrayList<String>() {{
+			add("Mokka-e");
+			add("Crossland");
+			add("Corsa");
+			add("Astra");
+			add("Vectra");
+		}});
+		map.put(MarcasCoches.Peugeot, new ArrayList<String>() {{
+			add("208");
+			add("308");
+			add("408");
+			add("5008");
+			add("3008");
+		}});
+		map.put(MarcasCoches.Renault, new ArrayList<String>() {{
+			add("Kangoo");
+			add("R-5");
+			add("Megane");
+			add("Clio");
+			add("Twingo");
+		}});
+
+		return map;
+	}
+}

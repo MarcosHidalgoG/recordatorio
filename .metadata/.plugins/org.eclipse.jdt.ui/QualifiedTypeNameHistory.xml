@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="model.Dimension"/>
+    <fullyQualifiedTypeName name="model.Posicion"/>
+    <fullyQualifiedTypeName name="model.Coordenadas"/>
+    <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.ObjectMapper"/>
+    <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.DeserializationFeature"/>
+    <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
+    <fullyQualifiedTypeName name="model.exception.DataOutOfBounds"/>
+    <fullyQualifiedTypeName name="controller.utils.Utils"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="model.enums.MarcasCoches"/>
+    <fullyQualifiedTypeName name="model.exception.RequirementsNotMatchesException"/>
+    <fullyQualifiedTypeName name="model.exception.DataOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
+    <fullyQualifiedTypeName name="java.lang.Throwable"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="model.Coche"/>
+    <fullyQualifiedTypeName name="controller.utils.ControladorCoche"/>
+    <fullyQualifiedTypeName name="model.Vehiculo"/>
+    <fullyQualifiedTypeName name="controller.utils.SingletonExample"/>
+    <fullyQualifiedTypeName name="view.InterfazVehiculo"/>
+</qualifiedTypeNameHistroy>

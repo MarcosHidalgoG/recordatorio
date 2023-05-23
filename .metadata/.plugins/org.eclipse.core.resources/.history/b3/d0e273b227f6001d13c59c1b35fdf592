@@ -1,0 +1,14 @@
+package controller.utils;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import model.enums.MarcasCoches;
+
+public class Utils {
+	public static HashMap<MarcasCoches, ArrayList<String>> generateRelacionMarcaModelo() {
+		HashMap<MarcasCoches, ArrayList<String>> map = new HashMap(); 
+		map
+		return null;
+	}
+}

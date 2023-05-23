@@ -1,0 +1,135 @@
+package controller.utils;
+
+import model.Coche;
+import model.Dimension;
+import model.Posicion;
+import model.enums.MarcasCoches;
+import model.exception.DataOutOfBoundsException;
+import model.exception.RequirementsNotMatchesException;
+import view.InterfazVehiculo;
+
+public class ControladorCoche implements InterfazVehiculo<Coche> {
+
+	@Override
+	public void setPeso(float peso, Coche obj) {
+		// TODO Auto-generated method stub
+		obj.setPeso(peso);
+	}
+	@Override
+	public void setNombre(String nombre, Coche obj) {
+		// TODO Auto-generated method stub
+		obj.setNombre(nombre);
+	}
+
+	@Override
+	public void setDescripcion(String descripcion, Coche obj) {
+		// TODO Auto-generated method stub
+		obj.setDescripcion(descripcion);
+	}
+
+	@Override
+	public void setUbicacion(Posicion ubicacion, Coche obj) {
+		// TODO Auto-generated method stub
+		obj.setUbicacion(ubicacion);
+	}
+
+	@Override
+	public void setDimensiones(Dimension dimensiones, Coche obj) {
+		// TODO Auto-generated method stub
+		obj.setDimensiones(dimensiones);
+	}
+
+	@Override
+	public void setNruedas(int nruedas, Coche obj) throws DataOutOfBoundsException {
+		// TODO Auto-generated method stub
+		obj.setNruedas(nruedas);
+	}
+
+	@Override
+	public void setNpuertas(int npuertas, Coche obj) throws DataOutOfBoundsException {
+		// TODO Auto-generated method stub
+		obj.setNpuertas(npuertas);
+	}
+
+	@Override
+	public void setMarcas(MarcasCoches MARCAS, Coche obj) {
+		// TODO Auto-generated method stub
+		obj.setMarcas(MARCAS);
+	}
+
+	@Override
+	public void setModelo(String modelo, Coche obj) {
+		// TODO Auto-generated method stub
+		try {
+			obj.setModelo(modelo);
+		} catch (RequirementsNotMatchesException | DataOutOfBoundsException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public float getPeso(Coche obj) {
+		// TODO Auto-generated method stub
+		return obj.getPeso();
+	}
+
+	@Override
+	public String getNombre(Coche obj) {
+		// TODO Auto-generated method stub
+		return obj.getNombre();
+	}
+
+	@Override
+	public String getDescripcion(Coche obj) {
+		// TODO Auto-generated method stub
+		return obj.getDescripcion();
+	}
+
+	@Override
+	public Posicion getUbicacion(Coche obj) {
+		// TODO Auto-generated method stub
+		return obj.getUbicacion();
+	}
+
+	@Override
+	public Dimension getDimensiones(Coche obj) {
+		// TODO Auto-generated method stub
+		return obj.getDimensiones();
+	}
+
+	@Override
+	public int getNruedas(Coche obj) {
+		// TODO Auto-generated method stub
+		return obj.getNruedas();
+	}
+
+	@Override
+	public int getNpuertas(Coche obj) {
+		// TODO Auto-generated method stub
+		return obj.getNpuertas();
+	}
+
+	@Override
+	public MarcasCoches getMarcas(Coche obj) {
+		// TODO Auto-generated method stub
+		return obj.getMarcas();
+	}
+
+	@Override
+	public String getModelo(Coche obj) {
+		// TODO Auto-generated method stub
+		return obj.get
+	}
+	
+	private Coche castToCoche(Coche obj) throws Exception {
+		if(!(obj instanceof Coche)) {
+			throw new Exception();
+		}
+		// --->Otra forma de castear//
+		//Coche.class.cast(obj);
+		return (Coche) obj;
+	}
+
+
+}

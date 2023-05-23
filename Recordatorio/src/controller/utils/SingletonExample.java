@@ -1,0 +1,17 @@
+package controller.utils;
+
+public class SingletonExample {
+	private static SingletonExample instancia;
+	
+	private SingletonExample() {
+		
+	}
+	
+	public static SingletonExample getSingletonExampleGetInstances() {
+		if(instancia==null) {
+			instancia = new SingletonExample();
+		}
+		return instancia;
+	}
+
+}

@@ -1,0 +1,28 @@
+package view;
+
+import model.Dimension;
+import model.Posicion;
+import model.enums.MarcasCoches;
+import model.exception.DataOutOfBoundsException;
+
+public interface InterfazVehiculo {
+	public void setPeso(float peso);
+	public void setNombre(String nombre);
+	public void setDescripcion(String descripcion);
+	public void setUbicacion(Posicion ubicacion);
+	public void setDimensiones(Dimension dimensiones);
+	public void setNruedas(int nruedas) throws DataOutOfBoundsException;
+	public void setNpuertas(int npuertas) throws DataOutOfBoundsException;
+	public void setMarcas(MarcasCoches MARCAS);
+	public void setModelo(String modelo);
+	
+	public float getPeso();
+	public String getNombre();
+	public String getDescripcion();
+	public Posicion getUbicacion();
+	public Dimension getDimensiones();
+	public int getNruedas();
+	public int getNpuertas();
+	public MarcasCoches getMarcas();
+	public String getModelo();
+}

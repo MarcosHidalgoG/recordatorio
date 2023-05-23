@@ -1,0 +1,8 @@
+package controller.utils;
+
+import view.InterfazVehiculo;
+
+public class ControladorCoche implements InterfazVehiculo {
+	
+
+}

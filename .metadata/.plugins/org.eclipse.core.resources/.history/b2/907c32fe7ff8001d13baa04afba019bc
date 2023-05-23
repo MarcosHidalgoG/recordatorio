@@ -1,0 +1,129 @@
+package controller.utils;
+
+import model.Coche;
+import model.Dimension;
+import model.Posicion;
+import model.enums.MarcasCoches;
+import model.exception.DataOutOfBoundsException;
+import view.InterfazVehiculo;
+
+public class ControladorCoche implements InterfazVehiculo<Coche> {
+
+	@Override
+	public void setPeso(float peso, Coche obj) {
+		// TODO Auto-generated method stub
+		obj.setPeso(peso);
+	}
+	@Override
+	public void setNombre(String nombre,  Coche obj) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setDescripcion(String descripcion, Coche obj) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setUbicacion(Posicion ubicacion, Coche obj) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setDimensiones(Dimension dimensiones, Coche obj) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setNruedas(int nruedas, Coche obj) throws DataOutOfBoundsException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setNpuertas(int npuertas, Coche obj) throws DataOutOfBoundsException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setMarcas(MarcasCoches MARCAS, Coche obj) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setModelo(String modelo, Coche obj) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public float getPeso(Coche obj) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public String getNombre(Coche obj) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getDescripcion(Coche obj) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Posicion getUbicacion(Coche obj) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Dimension getDimensiones(Coche obj) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getNruedas(Coche obj) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getNpuertas(Coche obj) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public MarcasCoches getMarcas(Coche obj) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getModelo(Coche obj) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	private Coche castToCoche(Coche obj) throws Exception {
+		if(!(obj instanceof Coche)) {
+			throw new Exception();
+		}
+		// --->Otra forma de castear//
+		//Coche.class.cast(obj);
+		return (Coche) obj;
+	}
+
+
+}

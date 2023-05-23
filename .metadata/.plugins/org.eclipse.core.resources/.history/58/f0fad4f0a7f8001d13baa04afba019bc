@@ -1,0 +1,118 @@
+package model;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import static controller.utils.Utils.generateRelacionMarcaModelo;
+import model.enums.MarcasCoches;
+import model.exception.DataOutOfBoundsException;
+import model.exception.RequirementsNotMatchesException;
+
+public class Coche extends Vehiculo{
+	private int nruedas, npuertas;
+	private String nmatricula;	
+	private MarcasCoches MARCAS;
+	private static final HashMap<MarcasCoches, ArrayList<String>> relacionMarcaModelo = generateRelacionMarcaModelo();
+	private String modelo;
+	
+	public Coche() {
+		super();
+		try {
+			setMarcas(MarcasCoches.NO_MARCA);
+			setNruedas(1);
+		} catch (DataOutOfBoundsException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		// TODO Auto-generated constructor stub
+	}
+
+	public Coche(float peso, String nombre, String descripcion, Posicion ubicacion, Dimension dimensiones) {
+		super(peso, nombre, descripcion, ubicacion, dimensiones);
+		// TODO Auto-generated constructor stub
+		setMarcas(MarcasCoches.NO_MARCA);
+	}
+	
+	public Coche(float peso, String nombre, String descripcion, Posicion ubicacion, Dimension dimensiones, int nruedas, int npuertas, String nmatricula, MarcasCoches MARCAS) throws DataOutOfBoundsException {
+		super(peso, nombre, descripcion, ubicacion, dimensiones);
+		// TODO Auto-generated constructor stub
+		setNpuertas(npuertas);
+		setNruedas(nruedas);
+		setNmatricula(nmatricula);
+		setMarcas(MARCAS);
+	}
+
+	public Coche(int nruedas, int npuertas, String nmatricula, MarcasCoches MARCAS) throws DataOutOfBoundsException {
+		super();
+		setNpuertas(npuertas);
+		setNruedas(nruedas);
+		setNmatricula(nmatricula);
+		setMarcas(MARCAS);
+	}
+
+	public int getNruedas() {
+		return nruedas;
+	}
+
+	public void setNruedas(int nruedas) throws DataOutOfBoundsException {
+		if(nruedas < 1) {
+			throw new DataOutOfBoundsException();
+		}
+		this.nruedas = nruedas;
+	}
+
+	public int getNpuertas() {
+		return npuertas;
+	}
+
+	public void setNpuertas(int npuertas) throws DataOutOfBoundsException {
+		if(npuertas < 0) {
+			throw new DataOutOfBoundsException();
+		}
+		this.npuertas = npuertas;
+	}
+
+	public String getNmatricula() {
+		return nmatricula;
+	}
+
+	public void setNmatricula(String nmatricula) {
+		this.nmatricula = nmatricula;
+	}
+
+	public MarcasCoches getMarcas() {
+		return MARCAS;
+	}
+	
+	public String getModelo() {
+		return modelo;
+	}
+
+	public void setModelo(String modelo) throws RequirementsNotMatchesException, DataOutOfBoundsException {
+		if(this.MARCAS == MarcasCoches.NO_MARCA) {
+			throw new RequirementsNotMatchesException();
+		}
+		if(!getModeloFromMarca(this.MARCAS).contains(modelo)) {
+			throw new DataOutOfBoundsException();
+		}
+		this.modelo = modelo;
+	}
+
+	public static HashMap<MarcasCoches, ArrayList<String>> getRelacionmarcamodelo() {
+		return relacionMarcaModelo;
+	}
+	
+	public static ArrayList<String> getModeloFromMarca(MarcasCoches marca) {
+		return relacionMarcaModelo.get(marca);
+	}
+
+	public void setMarcas(MarcasCoches MARCAS) {
+		this.MARCAS = MARCAS;
+	}
+
+	@Override
+	public String toString() {
+		return "Coche [nruedas=" + nruedas + ", npuertas=" + npuertas + ", nmatricula=" + nmatricula + ", marca"
+				+ MARCAS + ", Datos del " + super.toString() + "]";
+	}
+
+}

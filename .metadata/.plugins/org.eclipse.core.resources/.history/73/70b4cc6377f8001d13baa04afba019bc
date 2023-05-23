@@ -1,0 +1,120 @@
+package controller.utils;
+
+import model.Dimension;
+import model.Posicion;
+import model.enums.MarcasCoches;
+import model.exception.DataOutOfBoundsException;
+import view.InterfazVehiculo;
+
+public class ControladorCoche implements InterfazVehiculo {
+
+	@Override
+	public void setPeso(float peso) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setNombre(String nombre) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setDescripcion(String descripcion) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setUbicacion(Posicion ubicacion) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setDimensiones(Dimension dimensiones) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setNruedas(int nruedas) throws DataOutOfBoundsException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setNpuertas(int npuertas) throws DataOutOfBoundsException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setMarcas(MarcasCoches MARCAS) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setModelo(String modelo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public float getPeso() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public String getNombre() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getDescripcion() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Posicion getUbicacion() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Dimension getDimensiones() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getNruedas() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getNpuertas() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public MarcasCoches getMarcas() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getModelo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+
+}

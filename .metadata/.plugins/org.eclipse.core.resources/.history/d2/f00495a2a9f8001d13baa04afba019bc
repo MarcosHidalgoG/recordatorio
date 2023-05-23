@@ -1,0 +1,39 @@
+package view;
+
+import model.Dimension;
+import model.Posicion;
+import model.Vehiculo;
+import model.enums.MarcasCoches;
+import model.exception.DataOutOfBoundsException;
+
+public interface InterfazVehiculo<T extends Vehiculo> {
+	public default void setPeso(float peso, T vehiculo) {
+		vehiculo.setPeso(peso);
+	}
+	public default void setNombre(String nombre, T vehiculo) {
+		vehiculo.setNombre(nombre);
+	}
+	public default void setDescripcion(String descripcion, T vehiculo) {
+		vehiculo.setDescripcion(descripcion);
+	}
+	public default void setUbicacion(Posicion ubicacion, T vehiculo) {
+		vehiculo.setUbicacion(ubicacion);
+	}
+	public default void setDimensiones(Dimension dimensiones, T vehiculo) {
+		vehiculo.setDimensiones(dimensiones);
+	}
+	public void setNruedas(int nruedas, T vehiculo) throws DataOutOfBoundsException;
+	public void setNpuertas(int npuertas, T vehiculo) throws DataOutOfBoundsException;
+	public void setMarcas(MarcasCoches MARCAS, T vehiculo);
+	public void setModelo(String modelo, T vehiculo);
+	
+	public float getPeso(T vehiculo);
+	public String getNombre(T vehiculo);
+	public String getDescripcion(T vehiculo);
+	public Posicion getUbicacion(T vehiculo);
+	public Dimension getDimensiones(T vehiculo);
+	public int getNruedas(T vehiculo);
+	public int getNpuertas(T vehiculo);
+	public MarcasCoches getMarcas(T vehiculo);
+	public String getModelo(T vehiculo);
+}

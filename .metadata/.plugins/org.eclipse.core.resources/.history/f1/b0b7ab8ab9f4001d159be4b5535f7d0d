@@ -1,0 +1,6 @@
+package model;
+
+public class Dimension {
+	float altura, anchura, longitud;
+	
+}

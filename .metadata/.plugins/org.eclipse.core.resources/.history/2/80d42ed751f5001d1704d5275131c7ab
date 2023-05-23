@@ -1,0 +1,32 @@
+package model.exception;
+
+public class DataOutOfBounds extends Exception{
+	
+	private final String message;
+	
+	public DataOutOfBounds() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public DataOutOfBounds(Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+		super(message, cause, enableSuppression, writableStackTrace);
+		// TODO Auto-generated constructor stub
+	}
+
+	public DataOutOfBounds(Throwable cause) {
+		super(message, cause);
+		// TODO Auto-generated constructor stub
+	}
+
+	public DataOutOfBounds(String message) {
+		super(message);
+		// TODO Auto-generated constructor stub
+	}
+
+	public DataOutOfBounds(Throwable cause) {
+		super(cause);
+		// TODO Auto-generated constructor stub
+	}
+	
+}

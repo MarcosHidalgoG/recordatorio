@@ -1,0 +1,6 @@
+package controller.utils;
+
+public class SingletonExample {
+	private static SingletonExample instance;
+
+}
